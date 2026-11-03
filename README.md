@@ -53,6 +53,7 @@ const results = a11ylint.run({
   links: [], // Array of link elements to test
   colorsElements: [], // Array of elements for color contrast testing
   headings: [], // Array of heading elements to test (h1-h6 or role="heading")
+  langElements: [], // Elements carrying a language change (lang / xml:lang below <html>), RGAA 8.8
   customIframeBannedWords: ['frame', 'iframe'] // Optional custom banned words
 });
 

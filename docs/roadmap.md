@@ -22,7 +22,9 @@ This roadmap presents the implementation status of all RGAA 4.1.2 criteria in th
 | RGAA 8.1.1 | Document doctype presence | ✅ | RGAA8.ts |
 | RGAA 8.1.3 | Document doctype position | ✅ | RGAA8.ts |
 | RGAA 8.3 | Document language attribute | ✅ | RGAA8.ts |
+| RGAA 8.4.1 | Default language code validity | ✅ | RGAA8.ts |
 | RGAA 8.5 | Document title presence | ✅ | RGAA8.ts |
+| RGAA 8.8.1 | Language change code validity | ✅ | RGAA8.ts |
 
 **Total Implemented: 13 out of 106 criteria (12.3%)**
 
@@ -85,9 +87,7 @@ This roadmap presents the implementation status of all RGAA 4.1.2 criteria in th
 | RGAA 7.4 | Context change control | High | Scripts | [#74](https://github.com/a11ylint/core/issues/74) |
 | RGAA 7.5 | Status messages | High | Scripts | [#75](https://github.com/a11ylint/core/issues/75) |
 | RGAA 8.1.2 | Valid doctype | Low | Mandatory Elements | [#67](https://github.com/a11ylint/core/issues/67) |
-| RGAA 8.4 | Language code validity | Low | Mandatory Elements | [#68](https://github.com/a11ylint/core/issues/68) |
 | RGAA 8.7 | Language changes indication | Medium | Mandatory Elements | [#69](https://github.com/a11ylint/core/issues/69) |
-| RGAA 8.8 | Language change code validity | Low | Mandatory Elements | [#70](https://github.com/a11ylint/core/issues/70) |
 | RGAA 8.9 | Semantic tag usage | Medium | Mandatory Elements | [#71](https://github.com/a11ylint/core/issues/71) |
 | RGAA 9.4 | Citation structure | Low | Information Structure | [#66](https://github.com/a11ylint/core/issues/66) |
 | RGAA 11.11 | Error correction suggestions | High | Forms | [#60](https://github.com/a11ylint/core/issues/60) |
@@ -175,11 +175,11 @@ This roadmap presents the implementation status of all RGAA 4.1.2 criteria in th
 - 📋 **RGAA 8.1.2** - Valid doctype (Medium)
 - 🔥 **RGAA 8.2** - Valid source code (Critical)
 - ✅ **RGAA 8.3** - Document language
-- 📋 **RGAA 8.4** - Language code validity (Medium)
+- ✅ **RGAA 8.4** - Language code validity (Medium)
 - ✅ **RGAA 8.5** - Document title
 - 🔥 **RGAA 8.6** - Page title relevance (Critical)
 - 📋 **RGAA 8.7** - Language changes (Medium)
-- 📋 **RGAA 8.8** - Language change validity (Medium)
+- ✅ **RGAA 8.8** - Language change validity (Medium)
 - 📋 **RGAA 8.9** - Semantic tag usage (Medium)
 - 🔵 **RGAA 8.10** - Reading direction (Low)
 

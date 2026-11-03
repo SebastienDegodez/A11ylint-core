@@ -46,7 +46,7 @@ describe('mapAuditDataCompliance', () => {
     expect(result['2'].percentage).toBe(50);
     expect(result['8'].compliance).toBeFalsy();
     expect(result['8'].ruleInError).toContain('RGAA - 8.3');
-    expect(result['8'].percentage).toBe(75);
+    expect(result['8'].percentage).toBe(83);
   });
 
   it('should handle missing rules as compliant', () => {

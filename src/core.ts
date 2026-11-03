@@ -4,7 +4,7 @@ import { RGAA2 } from './rules/RGAA2.js';
 import { RGAA6 } from './rules/RGAA6.js';
 import { ConstratsElement, RGAA3, VirtualContrastsElement } from './rules/RGAA3.js';
 import { RGAA11, FormFieldElement } from './rules/RGAA11.js';
-import { RGAA8 } from './rules/RGAA8.js';
+import { LangVirtualElement, RGAA8 } from './rules/RGAA8.js';
 import { RGAA9, HeadingVirtualElement } from './rules/RGAA9.js';
 import { AuditExporter, AuditResults, LogMessageParams, Mode } from './types.js';
 
@@ -18,6 +18,7 @@ type runParams = {
   colorsElements?: Array<ConstratsElement | VirtualContrastsElement>;
   formFields?: Array<FormFieldElement | HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>;
   headings?: Array<HeadingVirtualElement | HTMLHeadingElement | HTMLElement>;
+  langElements?: Array<LangVirtualElement | HTMLElement | Element>;
 };
 
 type AuditOptionsBase = {
@@ -50,11 +51,12 @@ export class Core {
     colorsElements = [],
     formFields = [],
     headings = [],
+    langElements = [],
   }: runParams) {
     const rgaa1 = new RGAA1(mode);
     const rgaa2 = new RGAA2(mode);
     const rgaa6 = new RGAA6(mode);
-    const rgaa8 = new RGAA8();
+    const rgaa8 = new RGAA8(mode);
     const rgaa3 = new RGAA3(mode);
     const rgaa11 = new RGAA11(mode);
     const rgaa9 = new RGAA9();
@@ -68,6 +70,8 @@ export class Core {
     const wrongLinks = rgaa6.RGAA62(links);
     const wrongDoctype = rgaa8.RGAA81([document]);
     const wrongLang = rgaa8.RGAA83([document]);
+    const wrongLangCode = rgaa8.RGAA84([document]);
+    const wrongLangChangeCode = rgaa8.RGAA88(langElements);
     const wrongTitle = rgaa8.RGAA85([document]);
     const wrongContrasts = rgaa3.RGAA32(colorsElements);
     const wrongFormFieldsLabels = rgaa11.RGAA111(formFields);
@@ -81,6 +85,8 @@ export class Core {
       ...wrongFramesBannedWords,
       ...wrongDoctype,
       ...wrongLang,
+      ...wrongLangCode,
+      ...wrongLangChangeCode,
       ...wrongTitle,
       ...wrongContrasts,
       ...wrongLinks,
